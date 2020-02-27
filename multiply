@@ -1,0 +1,7 @@
+if [[ $# -ne 2 ]]
+    then
+    echo "Usage: $0 [number1] [number1]"
+else
+    echo $(($1 * $2))
+fi
+

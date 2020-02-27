@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sum=0
+product=1
+
+while read line;
+do
+    sum=$(($sum + $line))
+    product=$(($product * $line))
+done
+
+echo $sum
+echo $product

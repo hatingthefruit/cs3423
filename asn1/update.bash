@@ -58,6 +58,5 @@ echo ${item_name:-$old_item_name} ${simp_name:-$old_simp_name}  >> $file_path
 echo ${unit_price:-$old_unit_price} ${curr_q:-$old_curr_q} ${max_q:-$old_max_q} >> $file_path
 echo ${item_desc:-$old_item_desc} >> $file_path
 
-
 #update the log file
 

@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#get the item number and make sure it is a 4-digit integer
+#get the item number
 read -p "Item number: " item_num
 
 
-#get the item name, and make sure there is no whitespace in it
+#get the item name, and simple name, make sure no whitespce in the simple name
 read -p "Item name: " item_name toss
 read -p "Simple name: " simp_name
 
-#get the unit price and check that it is a valid floating point number
+#get the unit price
 read -p "Unit price: " unit_price
 
 #Sanitize the price.
@@ -21,11 +21,11 @@ then
     unit_price=${unit_price}0
 fi
 
-#get current quantity and make sure it is an unsigned int
+#get current quantity 
 read -p "Current quantity: " curr_q
 
 
-#get max quantity and make sure it is an unsigned int
+#get max quantity
 read -p "Max quantity: " max_q
 read -p "Description: " item_desc
 

@@ -60,3 +60,5 @@ echo ${item_desc:-$old_item_desc} >> $file_path
 
 #update the log file
 
+echo "$(date '+%Y-%m-%d %H:%M:%S') UPDATED: $item_num - ${item_name:-$old_item_name} - ${curr_q:-$old_curr_q} / ${max_q:-$old_max_q}" >> ./data/queries.log
+

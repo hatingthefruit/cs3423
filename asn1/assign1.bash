@@ -19,7 +19,7 @@ do
         [Uu]) ./update.bash;;
         [Dd]) ./delete.bash;;
         [Tt]) ./total.bash;;
-        *) echo "Please enter a valid selection"; continue;;
+        *) echo "ERROR: Invalid option"; continue;;
     esac
 
     display_menu

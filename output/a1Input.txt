@@ -1,0 +1,31 @@
+r
+9823
+r
+5430
+c
+7777
+sml_widget
+Small Widget (1 oz.)
+6.99
+15
+50
+Small, white, widget w/o packaging
+r
+7777
+d
+9823
+r
+9823
+r
+3293
+u
+3293
+
+
+29.99
+33
+75
+
+
+r
+3293

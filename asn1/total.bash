@@ -17,11 +17,11 @@ then
     #exit if item does not exist
     echo "ERROR: item $item_num not found"
     exit 1
+#otherwise, print the required information
 else
 
 #read from file
 read_item < $file_path
 
 echo $item_num - $simp_name - \$$(echo "$unit_price * $curr_q" | bc -l) total
-
 fi

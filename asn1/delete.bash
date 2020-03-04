@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Function to read an object from a file
 read_item(){
     read item_name simp_name
     read unit_price curr_q max_q

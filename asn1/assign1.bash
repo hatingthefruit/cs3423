@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Function to make it easy to display the the menu on each iteration
 display_menu() {
     echo "Enter one of the following actions or press CTRL-D to exit."
     printf "\tC - create a new inventory item\n"
@@ -9,8 +10,11 @@ display_menu() {
     printf "\tT - calculate total value of an inventory item\n"
 }
 
+# Display the initial menu
 display_menu
 
+
+# Loop until EOF is reached
 while read input
 do
     case $input in

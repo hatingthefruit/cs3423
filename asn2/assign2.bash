@@ -2,7 +2,6 @@
 
 #define list of sed files
 command_list=(tokens.sed binary_ops.sed lines.sed conditions.sed braces.sed)
-
 #tokens.sed: Makes sure tokens are separated by exactly one space
 #binary_ops.sed: Makes sure operators are surrounded by exactly one space on either side
 #lines.sed: Strips trailing whitespace at the end of lines

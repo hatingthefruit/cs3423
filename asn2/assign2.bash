@@ -27,8 +27,6 @@ outfile=$(echo "$1" | sed -E -f outfile_fmt.sed)
 #t                              :   Skips to the end of the file if a substitution was made
 #s/(\w+)$/.\1_fmt/              :   Appends an _fmt at the end of the filename if there is no extension
 
-echo "$outfile"
-
 #write the input file to the output to avoid overwriting the input
 cat "$1" >"$outfile"
 

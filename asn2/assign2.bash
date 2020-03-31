@@ -6,7 +6,11 @@ sedfile=commands.sed
 if [[ $# -lt 1 ]]; then
     echo "Invalid number of arguments"
     echo
-    echo "usage: assign2.bash inputfile"
+    echo "  usage: assign2.bash inputfile"
+    echo
+    echo "  Where input file is a c file to be formatted"
+    echo
+    exit 1
 fi
 
 #check that the input file actually exists
@@ -15,14 +19,24 @@ if ! [[ -f $1 ]]; then
     exit 1
 fi
 
-#Save the input and output files in variables to make life easier
-infile=$1
+#Generate a filename to use as a cache
+#Follows the format .{inputfile}_fmt.{ext}
 outfile=$(echo "$1" | sed -E -f outfile_fmt.sed)
 
-cat "$infile" >"$outfile"
+#s/(\w+)\.(\w+)$/.\1_fmt.\2/    :   Inserts a _fmt before the period in a filename
+#t                              :   Skips to the end of the file if a substitution was made
+#s/(\w+)$/.\1_fmt/              :   Appends an _fmt at the end of the filename if there is no extension
 
+echo "$outfile"
+
+#write the input file to the output to avoid overwriting the input
+cat "$1" >"$outfile"
+
+#edit in place using the sedfile defined at the beginning of the script
 sed -i.bak -E -f "$sedfile" "$outfile"
 
+#write the output file to stdout
 cat "$outfile"
 
+#remove the temporary files created
 rm "$outfile" "$outfile.bak"
